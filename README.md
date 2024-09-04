@@ -13,7 +13,7 @@ You will also need to slightly modify your application so that it can be run fro
 
 This is an example build command for pyinstaller to build a standalone streamlit application for windows. You should modify the sections to add your own dependencies:
 
-pyinstaller --onedir --add-data="_your_script_name:." --add-data="_path_to_streamlit_static_directory_in_the_virtual_env>:streamlit/static" --additional-hooks-dir=hooks --copy-metadata streamlit --copy-metadata pydeck --hidden-import=_any_modules_a_build_fails_to_find> --hidden-import=_add_as_many_as_needed> --hidden-import=streamlit.runtime.scriptrunner.magic_funcs --hidden-import=streamlit-options-menu run_streamlit.py
+pyinstaller --onedir --add-data="_your_script_name:." --add-data="_path_to_streamlit_static_directory_in_the_virtual_env>:streamlit/static" --additional-hooks-dir=hooks --copy-metadata streamlit --copy-metadata pydeck --hidden-import=_any_modules_a_build_fails_to_find --hidden-import=_add_as_many_as_needed --hidden-import=streamlit.runtime.scriptrunner.magic_funcs --hidden-import=streamlit-options-menu run_streamlit.py
 
 I use the --onedir as I find it much more reliable than --onefile. Everything does not need to be loaded into memory and its still easy to package the resultant app for windows using something like InnoSetup.
 
