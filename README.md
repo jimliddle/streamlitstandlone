@@ -17,7 +17,7 @@ pyinstaller --onedir --add-data="_your_script_name:." --add-data="_path_to_strea
 
 I use the --onedir as I find it much more reliable than --onefile. Everything does not need to be loaded into memory and its still easy to package the resultant app for windows using something like InnoSetup.
 
-Note the <> where you need to add your own input relevant to your environment and project.
+Note the where you need to add your own input relevant to your environment and project.
 
 Also note the 'hooks' directory which, if you need to use it, should be in the same directory as the script. Sometimes, pyinstaller might not correctly identify all dependencies, especially for more complex packages. You can create a custom hook to ensure all components are bundled. See the hooks script in the repostory for an example of this.
 
