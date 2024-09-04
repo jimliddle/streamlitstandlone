@@ -19,6 +19,6 @@ I use the --onedir as I find it much more reliable than --onefile. Everything do
 
 Note where you need to add your own input relevant to your environment and project.
 
-Also note the 'hooks' directory which, if you need to use it, should be in the same directory as the script. Sometimes, pyinstaller might not correctly identify all dependencies, especially for more complex packages. You can create a custom hook to ensure all components are bundled. See the hooks script in the repostory for an example of this.
+Also note the 'hooks' directory which, if you need to use it, should be in the same directory as the script. Sometimes, pyinstaller might not correctly identify all dependencies, especially for more complex packages. You can create a custom hook to ensure all components are bundled. See the hooks script in the repostory for an example of this (note that the streamlit file is one I did really have to add to ensure all streamlit components and modules were packaged by pyinstaller).
 
 
