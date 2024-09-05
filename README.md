@@ -40,6 +40,7 @@ xattr -dr com.apple.quarantine /Applications/myapp
 exit 0
 </code>
 
+
 - End users who download the App will still need to cntrl-open the App to install it, as its not signed, and you need to temporarily pass Gatekeeper security for the App install, but once installed the App just needs to be double clicked from the App directory and it will launch a terminal window that launches the web server and the streamlist web app will fire up.
 
 
