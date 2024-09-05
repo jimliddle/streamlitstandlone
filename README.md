@@ -9,8 +9,6 @@ Instruction on how to generate standalone streamlit applications using pyinstall
 
 - You will need to slightlly modify your application to provide a streamlit wrapper file to be able to run the application. See the repo for an example of the streamlit wrapper file.
 
-- You will also need to slightly modify your application so that it can be run from streamlit from the standalone application. You can do this by:
-
 - This is an example build command for pyinstaller to build a standalone streamlit application for windows. You should modify the sections to add your own dependencies:
 
 <code>pyinstaller --onedir --add-data="_your_script_name:." --add-data="_path_to_streamlit_static_directory_in_the_virtual_env>:streamlit/static" --additional-hooks-dir=hooks --copy-metadata streamlit --copy-metadata pydeck --hidden-import=_any_modules_a_build_fails_to_find --hidden-import=_add_as_many_as_needed --hidden-import=streamlit.runtime.scriptrunner.magic_funcs --hidden-import=streamlit-options-menu run_streamlit.py</code>
