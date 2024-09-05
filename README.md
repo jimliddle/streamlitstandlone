@@ -5,7 +5,7 @@ Instruction on how to generate standalone streamlit applications using pyinstall
 
 - Once you have done this, and whilst in the python venv install pyinstaller:
 
-pip install pyinstaller
+<code>pip install pyinstaller</code>
 
 - You will need to slightlly modify your application to provide a streamlit wrapper file to be able to run the application. See the repo for an example of the streamlit wrapper file.
 
