@@ -33,10 +33,12 @@ To bundle an app for Mac there are a few things to note:
 
 - However note that if you intend to distribute the package across the internet ie. it will be downloaded you are going to need to ensure that after the package install, as part of its post install behavour it removes the quarantine flags that are added by MacOS to a file when it is downloaded from the internet. These prevent the app from running. To do this create a directory called 'scripts' in the root of your streamlit app directory (alongside the script) and create a shell script called postinstall in there as such:
 
-<code>#!/bin/bash
+<code>
+#!/bin/bash
 # Remove quarantine flag from the installed app
 xattr -dr com.apple.quarantine /Applications/myapp
-exit 0</code>
+exit 0
+</code>
 
 - End users who download the App will still need to cntrl-open the App to install it, as its not signed, and you need to temporarily pass Gatekeeper security for the App install, but once installed the App just needs to be double clicked from the App directory and it will launch a terminal window that launches the web server and the streamlist web app will fire up.
 
